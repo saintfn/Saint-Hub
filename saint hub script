@@ -80,3 +80,61 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Lemuri4/lemuriscript/
 
    end,
 })
+
+local Button = MainTab:CreateButton({
+   Name = "Strongest Battlegrounds",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/Hunt/main/Strongest"))()
+
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Slap Battles",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dizyhvh/slap_battles_gui/main/0.lua"))()
+
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Arsenal",
+   Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/wuhaz/arsenal/main/main.lua'))()
+            
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Tower of Hell",
+   Callback = function()
+--Tower of hell (godmode script) MADE BY MEDOOGY01 (ISTHATTATICOOL)
+--SCRIPT IS OPEN SOURCE
+if TDI_LOADED then warn('already loaded') return end
+getgenv().TDI_LOADED = true
+for i,v in game.Players.LocalPlayer.Character:GetChildren() do
+if v.ClassName == 'Part' then
+local fb = v:FindFirstChild('TouchInterest')
+if fb then
+fb:Destroy()
+end
+end
+end
+warn('godmode is ready. if u reset, dont re-execute, it will reload automaticly')
+game.Players.LocalPlayer.CharacterAdded:Connect(function(char)
+if notautofarm then return end
+repeat wait() until game.Players.LocalPlayer.Character:FindFirstChild('HumanoidRootPart')
+for i,v in char:GetChildren() do
+if v.ClassName == 'Part' then
+local fb = v:FindFirstChild('TouchInterest')
+if fb then
+fb:Destroy()
+end
+end
+end
+warn('godmode is auto reloaded')
+end)
+            
+   end,
+})
+
