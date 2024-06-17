@@ -1,0 +1,82 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "Saint Hub",
+   LoadingTitle = "Welcome",
+   LoadingSubtitle = "by saint and crow",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Sainthub123"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "zU7PTCG6",
+      RememberJoins = true
+   },
+   KeySystem = false, 
+   KeySettings = {
+      Title = "Baseplate | Key System",
+      Subtitle = "Link in Discord Server",
+      Note = "Join Server From Misc Tab",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local MainTab = Window:CreateTab("Home", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("Main")
+
+Rayfield:Notify({
+   Title = "Executed Sucessfully!",
+   Content = "Thank you for using Saint's GUI!",
+   Duration = 3,
+   Image = nil,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay!",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Best Da Hood Lock",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModded"))()                        
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Blade Ball Auto Parry",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/Loader.lua"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Cali Shootout Farm",
+   Callback = function()
+getgenv().Autofarm = true -- Autofarm
+getgenv().CleanerTp = true -- Prevents breakage
+getgenv().YOffset = 4 -- Offset
+getgenv().Police = true -- Changes to police
+getgenv().AutoEquip = true -- Auto equip handcuffs
+getgenv().LoadAll = true -- Loads the map to find all criminals
+getgenv().AutoServerhop = true -- Serverhops when theres no more criminals with bounties
+getgenv().ServerhopDelay = 3 -- Delay in serverhopping
+loadstring(game:HttpGet(("https://gus.exploiter.info/p/raw/nh9zrifnfd"),true))()                       
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Blox Fruits Farm (KEY NEEDED)",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Lemuri4/lemuriscript/main/bloxfruittttttttttt.lua"))()
+
+   end,
+})
