@@ -10,11 +10,11 @@ local Window = Rayfield:CreateWindow({
       FileName = "Sainthub123"
    },
    Discord = {
-      Enabled = true,
+      Enabled = false,
       Invite = "zU7PTCG6", 
       RememberJoins = true
    },
-   KeySystem = true, -- Set this to true to use our key system
+   KeySystem = false, -- Set this to true to use our key system
    KeySettings = {
       Title = "Saint Hub | Key System",
       Subtitle = "Link in Discord Server",
